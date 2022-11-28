@@ -6,5 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Angular';
+
+  modal: boolean = false
+  modal2: boolean = false
+
+  abrirModal(){
+    this.modal = !this.modal
+  }
+
+  abrirModal2(){
+    this.modal2 = !this.modal2
+  }
+  
+
+  fecharModal(){
+    this.modal = false;
+    this.modal2 = false;
+  }
 }
