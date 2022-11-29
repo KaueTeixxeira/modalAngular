@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { ModalComponentComponent } from './modal-component/modal-component.component';
 
 @Component({
   selector: 'app-root',
@@ -6,21 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  @ViewChild('dsadadsa')
+  variavelModal: ModalComponentComponent
 
   modal: boolean = false
   modal2: boolean = false
 
-  abrirModal(){
-    this.modal = !this.modal
+  abrirModal() {
+    console.log(this.variavelModal)
+    this.variavelModal.abrirModal2()
   }
 
-  abrirModal2(){
-    this.modal2 = !this.modal2
-  }
+
   
-
-  fecharModal(){
-    this.modal = false;
-    this.modal2 = false;
-  }
 }

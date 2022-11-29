@@ -1,14 +1,7 @@
-<button (click)="abrirModal()">abrir modal</button>
-<button (click)="abrirModal2()">abrir modal2</button>
-
-<div *ngIf="modal" (click)="fecharModal()">
-  <app-modal-component >
-    <img src="https://imageproxy.ifunny.co/crop:x-20,resize:640x,quality:90x75/images/080b96494df170acb452d7aeff9b186375630a2142149cc67931c5fcefc1c5c5_1.jpg" alt="">
-  </app-modal-component>
+<div class="corpo">
+  <button (click)="abrirModal()" class="botao">abrir modal</button>
+    <app-modal-component #dsadadsa>
+      <img src="https://imageproxy.ifunny.co/crop:x-20,resize:640x,quality:90x75/images/080b96494df170acb452d7aeff9b186375630a2142149cc67931c5fcefc1c5c5_1.jpg" alt="">
+      <button (click)="abrirModal()">fechar modal</button>
+    </app-modal-component>
 </div>
-<div *ngIf="modal2" (click)="fecharModal()">
-  <app-modal-component>
-    <img src="https://img.ifunny.co/images/c602a8f5663dc914a8d4fba9148eda2aba3a15c9767f62379ac0bb7c2247c175_1.jpg" alt="">
-  </app-modal-component>
-</div>
-
