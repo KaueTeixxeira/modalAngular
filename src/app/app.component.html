@@ -1,7 +1,34 @@
-<div class="corpo">
-  <button (click)="abrirModal()" class="botao">abrir modal</button>
+<!-- <div class="corpo">
+  <button (click)="abrirModal()" class="botao">API rick and morty
+  </button>
     <app-modal-component #dsadadsa>
-      <img src="https://imageproxy.ifunny.co/crop:x-20,resize:640x,quality:90x75/images/080b96494df170acb452d7aeff9b186375630a2142149cc67931c5fcefc1c5c5_1.jpg" alt="">
+      <select [(ngModel)]="selectedTag">
+  <option *ngFor="let tag of tags" [value]="tag">{{ tag }}</option>
+</select>
+
+<input type="number" [(ngModel)]="statusCode" />
+
+<button (click)="consultar()">Consultar</button>
+
+<img *ngIf="linkImage" [src]="linkImage"/>
       <button (click)="abrirModal()">fechar modal</button>
     </app-modal-component>
+</div>
+ -->
+ <div class="corpo">
+ <div *ngFor="let personagem of personagens" style="display: flex; flex-wrap: wrap;" >
+  <img [src]="personagem.image" (click)="mostraDados(personagem)">
+ </div>
+</div>
+
+<div class="corpo">
+  <app-modal-component #dsadadsa>
+    <img [src]="imagemPersonagem" alt="">
+
+    <p>Gênero: {{especiePersonagem}}<br>Nome: {{nomePersonagem}}<br>Espécie: {{tipoPersonagem}}</p>
+    
+    
+    <button (click)="abrirModal()">Fechar modal</button>
+
+  </app-modal-component>
 </div>

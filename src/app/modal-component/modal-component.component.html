@@ -1,16 +1,6 @@
 <div *ngIf="modal2">
   <div class="modal">
     <ng-content></ng-content>
-    <button (click)="abrirModalNew()">
-      Abrir modal 2
-    </button>
   </div>
   <div class="overlay"></div>
-  <div *ngIf="modalnew">
-    <div class="modal">
-      <img src="https://www.einerd.com.br/wp-content/uploads/2021/08/neo-matrix.jpg" alt="">
-      <button (click)="abrirModalNew()">Fechar modal 2</button>
-    </div>
-    <div class="overlay"></div>
-  </div>
 </div>
