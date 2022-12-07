@@ -2,7 +2,7 @@
   width: 50%;
   height: 50%;
   background: #fff;
-  border-radius: 8px;
+  border-radius: 50px 8px 8px 50px;
   box-shadow: 0 2px 8px #333;
   min-width: 320px;
   position: fixed;
@@ -10,9 +10,13 @@
   padding: 24px;
   top: 50%;
   transform: translate(-50%, -50%);
-  z-index: 11;
+  z-index: 12;
   display: flex;
   justify-content: space-around;
+}
+
+.portal{
+  z-index: 10;
 }
 
 .overlay {
@@ -24,4 +28,11 @@
     top: 0;
     width: 100vw;
     z-index: 10;
+}
+
+.portalImagem {
+  position: fixed;
+  z-index: 11;
+  left: 0;
+  top: 0;
 }

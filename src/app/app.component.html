@@ -15,20 +15,28 @@
     </app-modal-component>
 </div>
  -->
+ <div class="header">
+  <img src="https://logosmarcas.net/wp-content/uploads/2022/01/Rick-And-Morty-Logo.png" alt="">
+  
+ </div>
+
+
  <div class="corpo">
  <div *ngFor="let personagem of personagens" style="display: flex; flex-wrap: wrap;" >
-  <img [src]="personagem.image" (click)="mostraDados(personagem)">
+  <img [src]="personagem.image" (click)="mostraDados(personagem)" class="imagens">
  </div>
 </div>
 
-<div class="corpo">
+
   <app-modal-component #dsadadsa>
     <img [src]="imagemPersonagem" alt="">
-
-    <p>Gênero: {{especiePersonagem}}<br>Nome: {{nomePersonagem}}<br>Espécie: {{tipoPersonagem}}</p>
-    
-    
-    <button (click)="abrirModal()">Fechar modal</button>
+    <div class="informacoesModal">
+      <div class="divDasInformacoes"><strong>Nome: &nbsp; </strong> {{nomePersonagem}}</div>
+      <div class="divDasInformacoes"><strong>Gênero: &nbsp;</strong> {{generoPersonagem}}</div>
+      <div class="divDasInformacoes"><strong>Espécie: &nbsp;</strong>  {{tipoPersonagem}}</div>
+      <div class="divDasInformacoes"><strong>Status: &nbsp;</strong>  {{statusPersonagem}}</div>
+      <div class="divDasInformacoes"><strong>Origem: &nbsp;</strong>  {{origemPersonagem}}</div>
+    </div>
+    <button (click)="abrirModal()"><strong>X</strong></button>
 
   </app-modal-component>
-</div>

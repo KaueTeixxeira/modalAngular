@@ -41,13 +41,17 @@ export class AppComponent {
   generoPersonagem: string;
   nomePersonagem: string;
   tipoPersonagem: string;
+  statusPersonagem: string;
+  origemPersonagem: string;
 
   mostraDados(personagem: object) {
-    console.log(personagem['species'])
+    console.log(personagem['status'])
     this.imagemPersonagem = personagem['image'];
     this.generoPersonagem = personagem['gender'];
     this.tipoPersonagem = personagem['species'];
-    this.nomePersonagem = personagem['name']
+    this.nomePersonagem = personagem['name'];
+    this.statusPersonagem = personagem['status'] == "unknown"? "Desconhecido":  personagem['status']
+    this.origemPersonagem = personagem['location']['name'];
     this.variavelModal.abrirModal2()
   }
   
